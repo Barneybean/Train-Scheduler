@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Train Scheduler</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,9 +12,77 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-</head>
+    <!-- javascript -->
+    <script src="assets/javascript/trainScheduler.js" type="text/javascript"></script>
+    <!-- Added Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  </head>
   <body>
-    
+    <div class="container">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4 text-center">Bay Area Train Schedule</h1>
+          <p class="lead text-center">This is a customizable Bay Area train scheduler</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          Curent Train Schedule
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <table class="table table-striped">
+              <thead>
+                <tr class="tableHeader">
+                  <th scope="col">Train Name</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Frequency (min)</th>
+                  <th scope="col">Next Arrival</th>
+                  <th scope="col">Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody class ="tableBody">
+                <tr>
+                  <td>Example: Orange Line</td>
+                  <td>Richmond</td>
+                  <td>7</td>
+                  <td>16:30</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </table>
+          </blockquote>
+        </div>
+      </div>
+      <br>
+      <div class="card">
+        <div class="card-header">
+          Add Train
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputTrainName">Train Name</label>
+              <input type="text" class="form-control" id="trainName" placeholder="ex: Orange Line">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputDestination">Destination</label>
+              <input type="text" class="form-control" id="destination" placeholder="ex: Richmond">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputFirstTrainTime">First Train Time (HH:mm- military time)</label>
+              <input type="text" class="form-control" id="firstTrainTime" placeholder="(HH:mm - ex: 14:30)">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputFrequency">Frequency min</label>
+              <input type="text" class="form-control" id="frequency" placeholder="30">
+            </div>
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+      
+    </div>
       
 
   </body>
