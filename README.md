@@ -1,6 +1,8 @@
 # Train-Scheduler
-Main contributor: William Gao 
+Developer: William Gao 
 Email: seewilliam.gao@gmail.com
+
+#Deployed Site: https://barneybean.github.io/Train-Scheduler/
 
 Introduction: 
 1. This project is a personal train scheduler that allow users to add train information to firebase database. 
